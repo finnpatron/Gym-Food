@@ -15,13 +15,21 @@
       </nav>
     </header>
     <main>
-        <h1>Welkom dit is gym food.</h1>
-        <form action="">
-          <label for="name">Vul uw naam in:</label>
+        <h1>Welkom bij Gym Food.</h1>
+        <form>
+          <label for="name">Naam:</label>
           <input type="text" id="name" name="name">
           <input type="submit" value="Reserveren">
         </form>
-      </main>
+        <script>
+          const form = document.querySelector('form');
+          form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const name = document.querySelector('#name').value;
+            alert(`${name}, je kan een kaartje halen bij Dilara. Zeg dit tegen Dilara.`);
+          });
+        </script>
+      </main>      
       
     <footer>
       <p>Copyright Gym Food © 2023</p>
